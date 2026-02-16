@@ -1,4 +1,27 @@
 # roadmapsh_expense-tracker
-My attempt at the expense tracker project from roadmap.sh. This is not intended for use, but as a mock project for practice on relevant material. Criticise or roast this how much you want, I wanna hear ya'lls thoughts.
+This repository is my attempt on roadmap.sh's expense tracker project typically assigned in skilled programming roadmaps. Most people post their attempts on the roadmap.sh website (deeply recommended you check out btw), but I decided to be a little extra and post it on github. You can roast my code however you want, but you have to tell me why it sucks.
 
-No contribution requests will be accepted for this project, as it is a solo project. The source code, of course, is open to the public.
+### Contributions
+Contribution requests will not be accepted for this repository.
+
+### Structure
+The directory structure of this project is plain obvious. You have:
+
+/'Expense Tracker'
+  /assets
+    Additional files such as the json file for data storage
+  /backup
+    Backups of storage files in the event of data corruption/loss from development or errors.
+  /src
+    The source code.
+  /test
+    Random scripts I write to test things I do not know outside of the expense class or main scripts.
+
+### Dependencies
+There are no required dependencies for this project.
+
+### Installation
+N/A
+
+### Usage
+This project is not intended for individual use, but you can use it if you'd like. **This project is still in development, so don't actually use it yet.**
