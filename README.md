@@ -24,4 +24,4 @@ There are no required dependencies for this project.
 N/A
 
 ### Usage
-This project is not intended for individual use, but you can use it if you'd like. **This project is still in development, so don't actually use it yet.**
+**This project is still in development, so don't actually use it yet.**
