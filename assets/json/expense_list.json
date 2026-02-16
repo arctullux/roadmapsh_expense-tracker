@@ -1,0 +1,72 @@
+{
+  "00": {
+    "name": "template",
+    "price": 0.0,
+    "description": "This is a template.",
+    "summary": "A template.",
+    "date": "01/17/2026"
+  },
+  "102": {
+    "name": "firewood",
+    "price": "30",
+    "description": "for the winter storm",
+    "summary": "firewod",
+    "date": "1/26/2026"
+  },
+  "103": {
+    "name": "wood",
+    "price": "fgds",
+    "description": "dfgsa",
+    "summary": "dfgs",
+    "date": "sdf"
+  },
+  "105": {
+    "name": "pen",
+    "price": "1.00",
+    "description": "office supplies",
+    "summary": "office supplies",
+    "date": "01/25/26"
+  },
+  "106": {
+    "name": "keyboard",
+    "price": "10.99",
+    "description": "office supplies",
+    "summary": "office",
+    "date": "12/31/2016"
+  },
+  "107": {
+    "name": "mouse",
+    "price": "21.99",
+    "description": "office supplies",
+    "summary": "office",
+    "date": "10/24/15"
+  },
+  "108": {
+    "name": "dog",
+    "price": "10.00",
+    "description": "because yes",
+    "summary": "yes",
+    "date": "10/10/25"
+  },
+  "109": {
+    "name": "backpack",
+    "price": "100.23",
+    "description": "skool",
+    "summary": "skool",
+    "date": "01/25/26"
+  },
+  "111": {
+    "name": "Tortilla",
+    "price": "2.99",
+    "description": "Making burritos using sauce, cheese, and meat.",
+    "summary": "Burrito making",
+    "date": "10/24/25"
+  },
+  "112": {
+    "name": "Cat",
+    "price": "20.32",
+    "description": "wfe",
+    "summary": "gg",
+    "date": "wgg"
+  }
+}

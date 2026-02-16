@@ -1,0 +1,23 @@
+{
+  "00": {
+    "name": "template",
+    "price": 0.0,
+    "description": "This is a template.",
+    "summary": "A template.",
+    "date": "01/17/2026"
+  },
+  "101": {
+    "name": "Tumbler",
+    "price": "10.99",
+    "description": "A water bottle that you can use to tumble down somebody's ego.",
+    "summary": "A water bottle.",
+    "date": "01/17/2026"
+  },
+  "102": {
+    "name": "Phone",
+    "price": "26.99",
+    "description": "An electrical device used to contact somebody from long distances.",
+    "summary": "A phone",
+    "date": "03/17/2026"
+  }
+}
