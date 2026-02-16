@@ -30,3 +30,9 @@ N/A
 
 ## Usage
 **This project is still in development, so don't actually use it yet.**
+
+## AI Use
+This project has minimal AI usage. The AI models that were used in this project's development are:
+- ChatGPT Basic
+The AI model(s) were used for:
+- Minor clarification and suggestions
