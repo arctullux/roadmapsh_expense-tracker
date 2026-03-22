@@ -7,16 +7,20 @@ from datetime import date
 from datetime import datetime
 class Expenses:
     # =====[DATA HANDLING]=====
-
+    # Recognizes file path to the main JSON file used to store expense data.
     targetFile = Path(__file__).resolve()
     jsonPath = targetFile.parent.parent / "assets" / "json" / "expense_list.json"
+    # Error boolean. May or may not be used.
     error = False
 
+    # Confirms JSON file path before program starts. Program cannot start without this being true.
     if jsonPath.exists():
         pass
     else:
         print(textRed(f"ERR !> Path not found. Looking for: {jsonPath}."))
 
+
+    # ============[Helper Methods]===============
     @classmethod
     def _json_helper_method(cls, permission, classMethodData):
         """
@@ -29,6 +33,7 @@ class Expenses:
                 The result of the operation, or none if an error occured.
 
         """
+        # Control flow statement that will open the file to read or writing.
         try:
             with open(cls.jsonPath, permission, encoding="utf-8") as file:
                 if permission == "r":
@@ -36,6 +41,7 @@ class Expenses:
                     return classMethodData(data, file)
                 else: # permission == "w"
                     return classMethodData(file)
+        # All possible JSON exceptions.
         except FileNotFoundError:
             print(textRed("ERR !> File not found."))
             return None
@@ -46,7 +52,15 @@ class Expenses:
             print(textRed("ERR !> File is not correct encoding or data requested does not exist."))
             return None
 
+     
+    def checkDate(dateString):
+        try:
+            format = datetime.strpdate(dateString, "%d/%m/%Y")
+            return True
+        except ValueError:
+            return False
 
+    # ===========================================
 
     """
     try:
@@ -62,15 +76,7 @@ class Expenses:
         print("The file does not contain UTF8, UTF16, or UTF32 encoded data.")"""
 
 
-    # ============[Helper Methods]===============
-    def checkDate(dateString):
-        try:
-            format = datetime.strpdate(dateString, "%d/%m/%Y")
-            return True
-        except ValueError:
-            return False
-
-    # ===========================================
+    
     def clearExpenses():
         pass
     @classmethod
@@ -118,6 +124,7 @@ class Expenses:
             return data
         expensePool = cls._json_helper_method("r",readFile)"""
 
+        # Implementing a second instance of the JSON try/except block seemed to work better and make this code simpler.
         try:
             with open(cls.jsonPath, "r", encoding="UTF-8") as file:
                 expensePool = json.load(file)
@@ -146,6 +153,7 @@ class Expenses:
 
         # ---------------------------------
         #
+        # Compile collected expense data.
         expensePool[str(expenseID)] = {
                 "name": name,
                 "price": price,
@@ -169,6 +177,8 @@ class Expenses:
 
     def updateExpense(expenseID):
         pass
+
+
     @classmethod
     def viewAllExpenses(cls):
 
@@ -195,15 +205,18 @@ class Expenses:
         pass
     @classmethod
     def removeExpense(cls, expenseID):
+        # A chance to take a step back in the menu before writing unnecessary expense data.
+        # Probably a temporary solution.
         if expenseID == "cont":
             print("Continued.")
             return
 
+        # Reads JSON file, required for cls._json_helper_method.
         def readFile(data, file):
             return data
 
         expensePool = cls._json_helper_method("r", readFile)
-
+        # Validates existing expense ID and data tied to said ID.
         if expenseID in expensePool:
             choice = input(f"Are you sure you want to delete item # {expenseID}? > ")
             if choice.upper() == "Y":
@@ -211,11 +224,12 @@ class Expenses:
                     print(textYellow("WAR #> Key not found."))
                     return
                 else:
-
+                    # Deletes existing expense ID, and all related data.
                     with open(cls.jsonPath, 'w') as file:
                         del expensePool[expenseID]
                         json.dump(expensePool, file, indent=2)
                 print(f"{expenseID} has been deleted.")
+                # Second option(Y/N) -- May change before project release.
             elif choice.upper() == "N":
                 print(f"{expenseID} has NOT been deleted.")
             else:
